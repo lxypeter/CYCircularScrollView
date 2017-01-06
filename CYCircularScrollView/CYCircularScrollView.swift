@@ -27,7 +27,7 @@ protocol CYCircularScrollProtocol {
 
 class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    //MARK:property
+    //MARK:- property
     var cellClass:UICollectionViewCell.Type {
         return UICollectionViewCell.self
     }
@@ -77,7 +77,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         return collectionView
     }()
     
-    //MARK: init method
+    //MARK:- init method
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.confiugureConstraints()
@@ -110,12 +110,12 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         self.timer = nil;
     }
     
-    //MARK:CYCircularScrollProtocol method, for override
+    //MARK:- CYCircularScrollProtocol method, for override
     func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
         return cell;
     }
     
-    //MARK:delegate method
+    //MARK:- delegate method
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if self.dataArray == nil {
@@ -188,7 +188,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
     
     func scrollToPage(_ page:Int){}
     
-    //MARK:timer
+    //MARK:- timer
     func resetTimer() {
         self.timer?.invalidate()
         
@@ -215,7 +215,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         
     }
     
-    //MARK:reload method
+    //MARK:- reload method
     func refresh() {
         self.collectionView.reloadData()
         self.resetTimer()

@@ -53,7 +53,7 @@ class CYPicBannerCell : UICollectionViewCell{
 
 class CYPicBannerScrollView : CYCircularScrollView {
     
-    //MARK: property
+    //MARK:- property
     override var cellClass:UICollectionViewCell.Type {
         return CYPicBannerCell.self
     }
@@ -124,7 +124,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
         self.refresh()
     }
     
-    //MARK: page control setting
+    //MARK:- page control setting
     func updatePageControl() {
         
         if self.dataArray == nil || self.dataArray!.count <= 1 {
@@ -169,7 +169,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
         }
     }
     
-    //MARK:override method
+    //MARK:- override method
     override func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell{
         let bannerCell = cell as! CYPicBannerCell
         

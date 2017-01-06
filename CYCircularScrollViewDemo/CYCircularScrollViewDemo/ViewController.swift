@@ -28,14 +28,36 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.lightGray
         
         //CYPicBannerScrollView
-        let bannerView:CYPicBannerScrollView = CYPicBannerScrollView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), images: [UIImage(named: "banner_1")!,UIImage(named: "banner_2")!,UIImage(named: "banner_3")!]) { (index, data) in
-            
+        let imageArray = [UIImage(named: "banner_1")!,UIImage(named: "banner_2")!,UIImage(named: "banner_3")!]
+        let bannerView = CYPicBannerScrollView(frame: CGRect.zero,
+                                               images:imageArray ) { (index, data) in
+            //click event
         }
         
+//        let urlArray = ["www","www","www"]
+//        let bannerView = CYPicBannerScrollView(frame: CGRect.zero,
+//                                               urlStrings: urlArray,
+//                                               placeholder: UIImage(named: "pic_placeholder")) { (index, data) in
+//            
+//        }
+        
+//        let announceArray = [Announcement(title:"First Announcement",time:"2017-01-01",image:"p1"),
+//                            Announcement(title:"Second Announcement",time:"2017-01-02",image:"p2"),
+//                            Announcement(title:"Third Announcement",time:"2017-01-03",image:"p3")]
+//        let bannerView = CYPicBannerScrollView(frame: CGRect.zero,
+//                                               models: announceArray,
+//                                               placeholder: UIImage(named: "pic_placeholder"),
+//                                               modelImage: { (model) -> (CYImageResult) in
+//            let announcement = model as! Announcement
+//            return CYImageResult(data: UIImage(named: model.image)!, type: .image)
+//        }) { (index, data) in
+//            //click event
+//        }
+        
         bannerView.autoScrollInterval = 3.0
+        
         //define the UIPageControl style as you like
         bannerView.pageControlPosition = .right
-//        bannerView.pageControlOffset = UIOffset(horizontal: -10, vertical: -5)
         bannerView.pageControl.backgroundColor = UIColor(displayP3Red: 51/255.0, green: 51/255.0, blue: 51/255.0, alpha: 0.8)
         bannerView.pageControl.layer.cornerRadius = 8
         
