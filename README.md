@@ -1,2 +1,2 @@
 # CYCircularScrollView
-A circular scrollview be used for picture banner or Information display like announcement.
+Used for picture banner or information display like announcement.
