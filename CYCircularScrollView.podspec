@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "1.0.0" }
 
-  s.source_files  = "CYCircularScrollView/**"
+  s.source_files  = ["CYCircularScrollView/*", "CYCircularScrollView/Kingfisher/*"]
 
   # s.requires_arc = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
