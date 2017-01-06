@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 enum CYPageControlPosition{
     case center
