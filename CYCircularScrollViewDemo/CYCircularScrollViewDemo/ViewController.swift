@@ -32,6 +32,7 @@ class ViewController: UIViewController {
             
         }
         
+        bannerView.autoScrollInterval = 3.0
         //define the UIPageControl style as you like
         bannerView.pageControlPosition = .right
 //        bannerView.pageControlOffset = UIOffset(horizontal: -10, vertical: -5)
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
         }
         self.view.addSubview(annouceScrollView)
         
+        annouceScrollView.autoScrollInterval = 3.0
         annouceScrollView.snp.makeConstraints { (make) in
             make.top.equalTo(bannerView.snp.bottom).offset(0)
             make.right.equalTo(0)

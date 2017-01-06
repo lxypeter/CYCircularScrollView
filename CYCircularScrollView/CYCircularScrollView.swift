@@ -20,7 +20,6 @@ protocol CYCircularScrollProtocol {
     var cellClass:UICollectionViewCell.Type {get}
     var scrollDirection:CYScrollDirection {get}
     var isScrollEnabled:Bool {get}
-    var autoScrollInterval:Double {get}
     
     func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell
     func scrollToPage(_ page:Int)
@@ -41,8 +40,10 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         return true
     }
     
-    var autoScrollInterval:Double {
-        return kCYScrollDefalutDuration
+    var autoScrollInterval:Double = kCYScrollDefalutDuration{
+        didSet{
+            self.resetTimer()
+        }
     }
     
     var didSelectClosure:((Int,Any)->())?
