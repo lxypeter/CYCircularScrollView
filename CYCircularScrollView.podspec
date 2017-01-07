@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CYCircularScrollView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "Used for picture banner or information display like announcement."
 
   # s.description  = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "1.0.2" }
 
   s.source_files  = ["CYCircularScrollView/*", "CYCircularScrollView/Kingfisher/*"]
 

@@ -11,12 +11,12 @@ import UIKit
 let kCYScrollDefalutDuration:Double = 5.0;
 let kCYScrollCellId = "kCYScrollCellId"
 
-enum CYScrollDirection:Int {
+public enum CYScrollDirection:Int {
     case vertical
     case horizontal
 }
 
-protocol CYCircularScrollProtocol {
+public protocol CYCircularScrollProtocol {
     var cellClass:UICollectionViewCell.Type {get}
     var scrollDirection:CYScrollDirection {get}
     var isScrollEnabled:Bool {get}
@@ -25,30 +25,30 @@ protocol CYCircularScrollProtocol {
     func scrollToPage(_ page:Int)
 }
 
-class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+public class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     //MARK:- property
-    var cellClass:UICollectionViewCell.Type {
+    public var cellClass:UICollectionViewCell.Type {
         return UICollectionViewCell.self
     }
     
-    var scrollDirection:CYScrollDirection {
+    public var scrollDirection:CYScrollDirection {
         return .horizontal
     }
     
-    var isScrollEnabled:Bool {
+    public var isScrollEnabled:Bool {
         return true
     }
     
-    var autoScrollInterval:Double = kCYScrollDefalutDuration{
+    public var autoScrollInterval:Double = kCYScrollDefalutDuration{
         didSet{
             self.resetTimer()
         }
     }
     
-    var didSelectClosure:((Int,Any)->())?
+    public var didSelectClosure:((Int,Any)->())?
     
-    var dataArray:[Any]? {
+    public var dataArray:[Any]? {
         didSet{
             if self.dataArray == nil {return}
             self.refresh()
@@ -57,7 +57,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
     
     private var timer:Timer?
     
-    lazy private var collectionView:UICollectionView = {
+    private lazy var collectionView:UICollectionView = {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumLineSpacing = 0
@@ -78,19 +78,19 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
     }()
     
     //MARK:- init method
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.confiugureConstraints()
     }
     
-    convenience init(frame: CGRect, datas:[Any]?, didSelected:((Int,Any)->())?) {
+    public convenience init(frame: CGRect, datas:[Any]?, didSelected:((Int,Any)->())?) {
         self.init(frame: frame)
         dataArray = datas
         didSelectClosure = didSelected
         self.refresh()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -111,12 +111,12 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
     }
     
     //MARK:- CYCircularScrollProtocol method, for override
-    func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
+    public func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
         return cell;
     }
     
     //MARK:- delegate method
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if self.dataArray == nil {
             return 0
@@ -127,7 +127,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         return number
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         var cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: kCYScrollCellId, for: indexPath)
         
@@ -141,11 +141,11 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = self.transferIndex(indexPath.row)
         let data = self.dataArray![index]
         if self.didSelectClosure != nil {
@@ -153,16 +153,16 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         }
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.timer?.invalidate()
         self.timer = nil
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         self.resetTimer()
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.dataArray == nil {
             return
         }
@@ -186,10 +186,10 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
         scrollToPage(page)
     }
     
-    func scrollToPage(_ page:Int){}
+    public func scrollToPage(_ page:Int){}
     
     //MARK:- timer
-    func resetTimer() {
+    private func resetTimer() {
         self.timer?.invalidate()
         
         if(self.autoScrollInterval<=0 || self.dataArray == nil || self.dataArray!.count<2) {
@@ -216,7 +216,7 @@ class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol,
     }
     
     //MARK:- reload method
-    func refresh() {
+    public func refresh() {
         self.collectionView.reloadData()
         self.resetTimer()
         //it's unable to scroll before the collectionview is shown

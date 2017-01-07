@@ -8,24 +8,24 @@
 
 import UIKit
 
-enum CYPageControlPosition{
+public enum CYPageControlPosition{
     case center
     case right
     case left
 }
 
-enum CYImageDataType{
+public enum CYImageDataType{
     case image
     case url
     case model
 }
 
-enum CYImageType{
+public enum CYImageType{
     case image
     case urlString
 }
 
-struct CYImageResult{
+public struct CYImageResult{
     var data:Any
     var type:CYImageType
     
@@ -35,7 +35,7 @@ struct CYImageResult{
     }
 }
 
-class CYPicBannerCell : UICollectionViewCell{
+public class CYPicBannerCell : UICollectionViewCell{
     var imageView:UIImageView?
     
     override init(frame: CGRect) {
@@ -46,58 +46,58 @@ class CYPicBannerCell : UICollectionViewCell{
         self.imageView = imageView
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-class CYPicBannerScrollView : CYCircularScrollView {
+public class CYPicBannerScrollView : CYCircularScrollView {
     
     //MARK:- property
-    override var cellClass:UICollectionViewCell.Type {
+    override public var cellClass:UICollectionViewCell.Type {
         return CYPicBannerCell.self
     }
     
-    override var dataArray:[Any]? {
+    override public var dataArray:[Any]? {
         didSet{
             self.updatePageControl()
         }
     }
     
-    var imageDataType:CYImageDataType = .image {
+    public var imageDataType:CYImageDataType = .image {
         didSet{
             self.refresh()
         }
     }
     
-    var placeholderImage:UIImage?
+    public var placeholderImage:UIImage?
     
-    lazy var pageControl:UIPageControl = {
+    public lazy var pageControl:UIPageControl = {
         let pageControl:UIPageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false;
         self.addSubview(pageControl)
         return pageControl
     }()
     
-    var pageControlPosition:CYPageControlPosition = .center{
+    public var pageControlPosition:CYPageControlPosition = .center{
         didSet{
             self.updatePageControl()
         }
     }
     
-    var pageControlOffset:UIOffset = UIOffset.zero{
+    public var pageControlOffset:UIOffset = UIOffset.zero{
         didSet{
             self.updatePageControl()
         }
     }
     
-    var modelImageClosure:((Any)->(CYImageResult))? {
+    public var modelImageClosure:((Any)->(CYImageResult))? {
         didSet{
             self.refresh()
         }
     }
     
-    convenience init(frame:CGRect, images:[Any]?, didSelected:((Int,Any)->())?) {
+    public convenience init(frame:CGRect, images:[Any]?, didSelected:((Int,Any)->())?) {
         self.init(frame: frame)
         dataArray = images
         didSelectClosure = didSelected
@@ -105,7 +105,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
         self.refresh()
     }
     
-    convenience init(frame:CGRect, urlStrings:[Any]?, placeholder:UIImage?, didSelected:((Int,Any)->())?) {
+    public convenience init(frame:CGRect, urlStrings:[Any]?, placeholder:UIImage?, didSelected:((Int,Any)->())?) {
         self.init(frame: frame)
         dataArray = urlStrings
         didSelectClosure = didSelected
@@ -114,7 +114,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
         self.refresh()
     }
 
-    convenience init(frame:CGRect, models:[Any]?, placeholder:UIImage?, modelImage:@escaping (Any)->(CYImageResult), didSelected:((Int,Any)->())?) {
+    public convenience init(frame:CGRect, models:[Any]?, placeholder:UIImage?, modelImage:@escaping (Any)->(CYImageResult), didSelected:((Int,Any)->())?) {
         self.init(frame: frame)
         dataArray = models
         didSelectClosure = didSelected
@@ -125,7 +125,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
     }
     
     //MARK:- page control setting
-    func updatePageControl() {
+    public func updatePageControl() {
         
         if self.dataArray == nil || self.dataArray!.count <= 1 {
             self.pageControl.isHidden = true
@@ -170,7 +170,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
     }
     
     //MARK:- override method
-    override func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell{
+    override public func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell{
         let bannerCell = cell as! CYPicBannerCell
         
         switch self.imageDataType {
@@ -204,7 +204,7 @@ class CYPicBannerScrollView : CYCircularScrollView {
         return bannerCell
     }
     
-    override func scrollToPage(_ page: Int) {
+    override public func scrollToPage(_ page: Int) {
         self.pageControl.currentPage = page
     }
 
