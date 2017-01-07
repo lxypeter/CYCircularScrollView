@@ -25,18 +25,18 @@ public protocol CYCircularScrollProtocol {
     func scrollToPage(_ page:Int)
 }
 
-public class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+open class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProtocol, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     //MARK:- property
-    public var cellClass:UICollectionViewCell.Type {
+    open var cellClass:UICollectionViewCell.Type {
         return UICollectionViewCell.self
     }
     
-    public var scrollDirection:CYScrollDirection {
+    open var scrollDirection:CYScrollDirection {
         return .horizontal
     }
     
-    public var isScrollEnabled:Bool {
+    open var isScrollEnabled:Bool {
         return true
     }
     
@@ -111,9 +111,11 @@ public class CYCircularScrollView : UICollectionReusableView, CYCircularScrollPr
     }
     
     //MARK:- CYCircularScrollProtocol method, for override
-    public func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
+    open func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
         return cell;
     }
+    
+    open func scrollToPage(_ page:Int){}
     
     //MARK:- delegate method
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -185,8 +187,6 @@ public class CYCircularScrollView : UICollectionReusableView, CYCircularScrollPr
         
         scrollToPage(page)
     }
-    
-    public func scrollToPage(_ page:Int){}
     
     //MARK:- timer
     private func resetTimer() {

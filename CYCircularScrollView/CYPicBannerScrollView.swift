@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 public enum CYPageControlPosition{
     case center
@@ -51,10 +52,10 @@ public class CYPicBannerCell : UICollectionViewCell{
     }
 }
 
-public class CYPicBannerScrollView : CYCircularScrollView {
+open class CYPicBannerScrollView : CYCircularScrollView {
     
     //MARK:- property
-    override public var cellClass:UICollectionViewCell.Type {
+    override open var cellClass:UICollectionViewCell.Type {
         return CYPicBannerCell.self
     }
     
@@ -170,7 +171,7 @@ public class CYPicBannerScrollView : CYCircularScrollView {
     }
     
     //MARK:- override method
-    override public func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell{
+    override open func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell{
         let bannerCell = cell as! CYPicBannerCell
         
         switch self.imageDataType {
@@ -204,7 +205,7 @@ public class CYPicBannerScrollView : CYCircularScrollView {
         return bannerCell
     }
     
-    override public func scrollToPage(_ page: Int) {
+    override open func scrollToPage(_ page: Int) {
         self.pageControl.currentPage = page
     }
 
