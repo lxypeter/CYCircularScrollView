@@ -61,7 +61,7 @@ let bannerView = CYPicBannerScrollView(frame: CGRect.zero,
                                         placeholder: UIImage(named: "pic_placeholder"),
                                         modelImage: { (model) -> (CYImageResult) in
     let announcement = model as! Announcement
-    return CYImageResult(data: UIImage(named: model.image)!, type: .image)
+    return CYImageResult(data: UIImage(named: announcement.image)!, type: .image)
 }) { (index, data) in
     //click event
 }
@@ -188,7 +188,7 @@ let bannerView = CYPicBannerScrollView(frame: CGRect.zero,
                                        placeholder: UIImage(named: "pic_placeholder"),
                                        modelImage: { (model) -> (CYImageResult) in
     let announcement = model as! Announcement
-    return CYImageResult(data: UIImage(named: model.image)!, type: .image)
+    return CYImageResult(data: UIImage(named: announcement.image)!, type: .image)
 }) { (index, data) in
     //click event
 }
