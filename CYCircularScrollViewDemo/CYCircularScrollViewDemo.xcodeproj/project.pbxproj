@@ -13,30 +13,10 @@
 		E11D6CD91E1DF15200DB7AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11D6CD71E1DF15200DB7AF0 /* Main.storyboard */; };
 		E11D6CDB1E1DF15200DB7AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11D6CDA1E1DF15200DB7AF0 /* Assets.xcassets */; };
 		E11D6CDE1E1DF15200DB7AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11D6CDC1E1DF15200DB7AF0 /* LaunchScreen.storyboard */; };
-		E11D6CEA1E1DF20700DB7AF0 /* CYCircularScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D6CE81E1DF20700DB7AF0 /* CYCircularScrollView.swift */; };
-		E11D6CEB1E1DF20700DB7AF0 /* CYPicBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D6CE91E1DF20700DB7AF0 /* CYPicBannerScrollView.swift */; };
-		E11D6D171E1DF2E800DB7AF0 /* Timer+CYBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D6D161E1DF2E800DB7AF0 /* Timer+CYBlock.swift */; };
-		E11D6D1A1E1E1F5700DB7AF0 /* CYAnnounceScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D6D191E1E1F5700DB7AF0 /* CYAnnounceScrollView.swift */; };
-		E1F191361E1F5C0100BFFE62 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191211E1F5C0100BFFE62 /* AnimatedImageView.swift */; };
-		E1F191371E1F5C0100BFFE62 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191221E1F5C0100BFFE62 /* Box.swift */; };
-		E1F191381E1F5C0100BFFE62 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191231E1F5C0100BFFE62 /* CacheSerializer.swift */; };
-		E1F191391E1F5C0100BFFE62 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191241E1F5C0100BFFE62 /* Filter.swift */; };
-		E1F1913A1E1F5C0100BFFE62 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191251E1F5C0100BFFE62 /* Image.swift */; };
-		E1F1913B1E1F5C0100BFFE62 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191261E1F5C0100BFFE62 /* ImageCache.swift */; };
-		E1F1913C1E1F5C0100BFFE62 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191271E1F5C0100BFFE62 /* ImageDownloader.swift */; };
-		E1F1913D1E1F5C0100BFFE62 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191281E1F5C0100BFFE62 /* ImagePrefetcher.swift */; };
-		E1F1913E1E1F5C0100BFFE62 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191291E1F5C0100BFFE62 /* ImageProcessor.swift */; };
-		E1F1913F1E1F5C0100BFFE62 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1912A1E1F5C0100BFFE62 /* ImageTransition.swift */; };
-		E1F191401E1F5C0100BFFE62 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1912B1E1F5C0100BFFE62 /* ImageView+Kingfisher.swift */; };
-		E1F191411E1F5C0100BFFE62 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1912C1E1F5C0100BFFE62 /* Indicator.swift */; };
-		E1F191421E1F5C0100BFFE62 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1912E1E1F5C0100BFFE62 /* Kingfisher.swift */; };
-		E1F191431E1F5C0100BFFE62 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1912F1E1F5C0100BFFE62 /* KingfisherManager.swift */; };
-		E1F191441E1F5C0100BFFE62 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191301E1F5C0100BFFE62 /* KingfisherOptionsInfo.swift */; };
-		E1F191451E1F5C0100BFFE62 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191311E1F5C0100BFFE62 /* RequestModifier.swift */; };
-		E1F191461E1F5C0100BFFE62 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191321E1F5C0100BFFE62 /* Resource.swift */; };
-		E1F191471E1F5C0100BFFE62 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191331E1F5C0100BFFE62 /* String+MD5.swift */; };
-		E1F191481E1F5C0100BFFE62 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191341E1F5C0100BFFE62 /* ThreadHelper.swift */; };
-		E1F191491E1F5C0100BFFE62 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F191351E1F5C0100BFFE62 /* UIButton+Kingfisher.swift */; };
+		E15ACE0D1E20C9A900490A07 /* CYAnnounceScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ACE0C1E20C9A900490A07 /* CYAnnounceScrollView.swift */; };
+		E15ACE431E21091700490A07 /* CYCircularScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ACE401E21091700490A07 /* CYCircularScrollView.swift */; };
+		E15ACE441E21091700490A07 /* CYPicBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ACE411E21091700490A07 /* CYPicBannerScrollView.swift */; };
+		E15ACE451E21091700490A07 /* Timer+CYBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ACE421E21091700490A07 /* Timer+CYBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,31 +30,10 @@
 		E11D6CDA1E1DF15200DB7AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11D6CDD1E1DF15200DB7AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E11D6CDF1E1DF15200DB7AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E11D6CE81E1DF20700DB7AF0 /* CYCircularScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYCircularScrollView.swift; sourceTree = "<group>"; };
-		E11D6CE91E1DF20700DB7AF0 /* CYPicBannerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYPicBannerScrollView.swift; sourceTree = "<group>"; };
-		E11D6D161E1DF2E800DB7AF0 /* Timer+CYBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+CYBlock.swift"; sourceTree = "<group>"; };
-		E11D6D191E1E1F5700DB7AF0 /* CYAnnounceScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYAnnounceScrollView.swift; sourceTree = "<group>"; };
-		E1F191211E1F5C0100BFFE62 /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
-		E1F191221E1F5C0100BFFE62 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		E1F191231E1F5C0100BFFE62 /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
-		E1F191241E1F5C0100BFFE62 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		E1F191251E1F5C0100BFFE62 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		E1F191261E1F5C0100BFFE62 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		E1F191271E1F5C0100BFFE62 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		E1F191281E1F5C0100BFFE62 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
-		E1F191291E1F5C0100BFFE62 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		E1F1912A1E1F5C0100BFFE62 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
-		E1F1912B1E1F5C0100BFFE62 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		E1F1912C1E1F5C0100BFFE62 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
-		E1F1912D1E1F5C0100BFFE62 /* Kingfisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kingfisher.h; sourceTree = "<group>"; };
-		E1F1912E1E1F5C0100BFFE62 /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
-		E1F1912F1E1F5C0100BFFE62 /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
-		E1F191301E1F5C0100BFFE62 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		E1F191311E1F5C0100BFFE62 /* RequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
-		E1F191321E1F5C0100BFFE62 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		E1F191331E1F5C0100BFFE62 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		E1F191341E1F5C0100BFFE62 /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
-		E1F191351E1F5C0100BFFE62 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		E15ACE0C1E20C9A900490A07 /* CYAnnounceScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYAnnounceScrollView.swift; sourceTree = "<group>"; };
+		E15ACE401E21091700490A07 /* CYCircularScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYCircularScrollView.swift; sourceTree = "<group>"; };
+		E15ACE411E21091700490A07 /* CYPicBannerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYPicBannerScrollView.swift; sourceTree = "<group>"; };
+		E15ACE421E21091700490A07 /* Timer+CYBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+CYBlock.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +86,8 @@
 		E11D6CD21E1DF15200DB7AF0 /* CYCircularScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E11D6D191E1E1F5700DB7AF0 /* CYAnnounceScrollView.swift */,
-				E11D6CE71E1DF20700DB7AF0 /* CYCircularScrollView */,
+				E15ACE3F1E21091700490A07 /* CYCircularScrollView */,
+				E15ACE0C1E20C9A900490A07 /* CYAnnounceScrollView.swift */,
 				E11D6CD31E1DF15200DB7AF0 /* AppDelegate.swift */,
 				E11D6CD51E1DF15200DB7AF0 /* ViewController.swift */,
 				E11D6CD71E1DF15200DB7AF0 /* Main.storyboard */,
@@ -139,44 +98,15 @@
 			path = CYCircularScrollViewDemo;
 			sourceTree = "<group>";
 		};
-		E11D6CE71E1DF20700DB7AF0 /* CYCircularScrollView */ = {
+		E15ACE3F1E21091700490A07 /* CYCircularScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				E1F191201E1F5C0100BFFE62 /* Kingfisher */,
-				E11D6D161E1DF2E800DB7AF0 /* Timer+CYBlock.swift */,
-				E11D6CE81E1DF20700DB7AF0 /* CYCircularScrollView.swift */,
-				E11D6CE91E1DF20700DB7AF0 /* CYPicBannerScrollView.swift */,
+				E15ACE401E21091700490A07 /* CYCircularScrollView.swift */,
+				E15ACE411E21091700490A07 /* CYPicBannerScrollView.swift */,
+				E15ACE421E21091700490A07 /* Timer+CYBlock.swift */,
 			);
 			name = CYCircularScrollView;
 			path = ../../CYCircularScrollView;
-			sourceTree = "<group>";
-		};
-		E1F191201E1F5C0100BFFE62 /* Kingfisher */ = {
-			isa = PBXGroup;
-			children = (
-				E1F191211E1F5C0100BFFE62 /* AnimatedImageView.swift */,
-				E1F191221E1F5C0100BFFE62 /* Box.swift */,
-				E1F191231E1F5C0100BFFE62 /* CacheSerializer.swift */,
-				E1F191241E1F5C0100BFFE62 /* Filter.swift */,
-				E1F191251E1F5C0100BFFE62 /* Image.swift */,
-				E1F191261E1F5C0100BFFE62 /* ImageCache.swift */,
-				E1F191271E1F5C0100BFFE62 /* ImageDownloader.swift */,
-				E1F191281E1F5C0100BFFE62 /* ImagePrefetcher.swift */,
-				E1F191291E1F5C0100BFFE62 /* ImageProcessor.swift */,
-				E1F1912A1E1F5C0100BFFE62 /* ImageTransition.swift */,
-				E1F1912B1E1F5C0100BFFE62 /* ImageView+Kingfisher.swift */,
-				E1F1912C1E1F5C0100BFFE62 /* Indicator.swift */,
-				E1F1912D1E1F5C0100BFFE62 /* Kingfisher.h */,
-				E1F1912E1E1F5C0100BFFE62 /* Kingfisher.swift */,
-				E1F1912F1E1F5C0100BFFE62 /* KingfisherManager.swift */,
-				E1F191301E1F5C0100BFFE62 /* KingfisherOptionsInfo.swift */,
-				E1F191311E1F5C0100BFFE62 /* RequestModifier.swift */,
-				E1F191321E1F5C0100BFFE62 /* Resource.swift */,
-				E1F191331E1F5C0100BFFE62 /* String+MD5.swift */,
-				E1F191341E1F5C0100BFFE62 /* ThreadHelper.swift */,
-				E1F191351E1F5C0100BFFE62 /* UIButton+Kingfisher.swift */,
-			);
-			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,32 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15ACE431E21091700490A07 /* CYCircularScrollView.swift in Sources */,
 				E11D6CD61E1DF15200DB7AF0 /* ViewController.swift in Sources */,
-				E1F191401E1F5C0100BFFE62 /* ImageView+Kingfisher.swift in Sources */,
-				E1F191391E1F5C0100BFFE62 /* Filter.swift in Sources */,
-				E1F191471E1F5C0100BFFE62 /* String+MD5.swift in Sources */,
-				E1F191431E1F5C0100BFFE62 /* KingfisherManager.swift in Sources */,
-				E1F1913C1E1F5C0100BFFE62 /* ImageDownloader.swift in Sources */,
+				E15ACE0D1E20C9A900490A07 /* CYAnnounceScrollView.swift in Sources */,
+				E15ACE451E21091700490A07 /* Timer+CYBlock.swift in Sources */,
 				E11D6CD41E1DF15200DB7AF0 /* AppDelegate.swift in Sources */,
-				E1F191451E1F5C0100BFFE62 /* RequestModifier.swift in Sources */,
-				E1F191441E1F5C0100BFFE62 /* KingfisherOptionsInfo.swift in Sources */,
-				E1F191461E1F5C0100BFFE62 /* Resource.swift in Sources */,
-				E1F191481E1F5C0100BFFE62 /* ThreadHelper.swift in Sources */,
-				E11D6D1A1E1E1F5700DB7AF0 /* CYAnnounceScrollView.swift in Sources */,
-				E1F1913D1E1F5C0100BFFE62 /* ImagePrefetcher.swift in Sources */,
-				E1F191491E1F5C0100BFFE62 /* UIButton+Kingfisher.swift in Sources */,
-				E1F191411E1F5C0100BFFE62 /* Indicator.swift in Sources */,
-				E11D6D171E1DF2E800DB7AF0 /* Timer+CYBlock.swift in Sources */,
-				E1F1913E1E1F5C0100BFFE62 /* ImageProcessor.swift in Sources */,
-				E1F191381E1F5C0100BFFE62 /* CacheSerializer.swift in Sources */,
-				E1F1913B1E1F5C0100BFFE62 /* ImageCache.swift in Sources */,
-				E11D6CEB1E1DF20700DB7AF0 /* CYPicBannerScrollView.swift in Sources */,
-				E1F191371E1F5C0100BFFE62 /* Box.swift in Sources */,
-				E11D6CEA1E1DF20700DB7AF0 /* CYCircularScrollView.swift in Sources */,
-				E1F1913A1E1F5C0100BFFE62 /* Image.swift in Sources */,
-				E1F191421E1F5C0100BFFE62 /* Kingfisher.swift in Sources */,
-				E1F1913F1E1F5C0100BFFE62 /* ImageTransition.swift in Sources */,
-				E1F191361E1F5C0100BFFE62 /* AnimatedImageView.swift in Sources */,
+				E15ACE441E21091700490A07 /* CYPicBannerScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
