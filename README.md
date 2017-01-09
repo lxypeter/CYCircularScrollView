@@ -97,7 +97,7 @@ override var cellClass:UICollectionViewCell.Type {
 ```
 - 3.override `func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell` method
 
-```class CYAnnounceScrollView : CYCircularScrollView{
+```swift
 override func configureCollectionCell(_ cell:UICollectionViewCell, data:Any) -> UICollectionViewCell {
 
     let announceCell = cell as! CYAnnounceCell
