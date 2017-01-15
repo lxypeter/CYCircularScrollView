@@ -219,9 +219,11 @@ open class CYCircularScrollView : UICollectionReusableView, CYCircularScrollProt
     public func refresh() {
         self.collectionView.reloadData()
         self.resetTimer()
-        //it's unable to scroll before the collectionview is shown
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.01) {
-            self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: [.top,.left], animated: false)
+        if let datas = self.dataArray, datas.count>1 {
+            //it's unable to scroll before the collectionview is shown
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.01) {
+                self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: [.top,.left], animated: false)
+            }
         }
     }
     
