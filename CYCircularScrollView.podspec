@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CYCircularScrollView"
-  s.version      = "2.0.1"
+  s.version      = "2.0.2"
   s.summary      = "Used for picture banner or information display like announcement."
 
   # s.description  = <<-DESC
@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "1.0.5" }
+  s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "2.0.2" }
 
-  s.source_files  = ["CYCircularScrollView/*", "CYCircularScrollView/Kingfisher/*"]
+  s.source_files  = ["CYCircularScrollView/*"]
 
   # s.requires_arc = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Kingfisher", "~> 4.0.0"
+  s.dependency "Kingfisher", "~> 4.0.1"
 
 end
