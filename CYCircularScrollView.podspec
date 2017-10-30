@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CYCircularScrollView"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "Used for picture banner or information display like announcement."
 
   # s.description  = <<-DESC
