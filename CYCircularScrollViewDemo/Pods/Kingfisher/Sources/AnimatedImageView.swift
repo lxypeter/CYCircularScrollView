@@ -9,7 +9,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2014-2016 Reda Lemeden.
+//  Copyright (c) 2017 Reda Lemeden.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -149,12 +149,12 @@ open class AnimatedImageView: UIImageView {
         super.didMoveToSuperview()
         didMove()
     }
-    
-    // This is for back compatibility that using regular UIImageView to show GIF.
-    override func shouldPreloadAllGIF() -> Bool {
+
+    // This is for back compatibility that using regular UIImageView to show animated image.
+    override func shouldPreloadAllAnimation() -> Bool {
         return false
     }
-    
+
     // MARK: - Private method
     /// Reset the animator.
     private func reset() {
@@ -179,7 +179,25 @@ open class AnimatedImageView: UIImageView {
     
     /// Update the current frame with the displayLink duration.
     private func updateFrame() {
-        if animator?.updateCurrentFrame(duration: displayLink.duration) ?? false {
+        let duration: CFTimeInterval
+
+        // CA based display link is opt-out from ProMotion by default.
+        // So the duration and its FPS might not match. 
+        // See [#718](https://github.com/onevcat/Kingfisher/issues/718)
+        if #available(iOS 10.0, tvOS 10.0, *) {
+            // By setting CADisableMinimumFrameDuration to YES in Info.plist may 
+            // cause the preferredFramesPerSecond being 0
+            if displayLink.preferredFramesPerSecond == 0 {
+                duration = displayLink.duration
+            } else {
+                // Some devices (like iPad Pro 10.5) will have a different FPS.
+                duration = 1.0 / Double(displayLink.preferredFramesPerSecond)
+            }
+        } else {
+            duration = displayLink.duration
+        }
+    
+        if animator?.updateCurrentFrame(duration: duration) ?? false {
             layer.setNeedsDisplay()
         }
     }
@@ -208,7 +226,7 @@ class Animator {
     fileprivate var timeSinceLastFrameChange: TimeInterval = 0.0
     fileprivate var needsPrescaling = true
     
-    /// Loop count of animatd image.
+    /// Loop count of animated image.
     private var loopCount = 0
     
     var currentFrame: UIImage? {
@@ -261,15 +279,18 @@ class Animator {
         let frameToProcess = min(frameCount, maxFrameCount)
         animatedFrames.reserveCapacity(frameToProcess)
         animatedFrames = (0..<frameToProcess).reduce([]) { $0 + pure(prepareFrame(at: $1))}
+        currentPreloadIndex = (frameToProcess + 1) % frameCount
     }
     
     private func prepareFrame(at index: Int) -> AnimatedFrame {
+        
         guard let imageRef = CGImageSourceCreateImageAtIndex(imageSource, index, nil) else {
             return AnimatedFrame.null
         }
         
-        let frameDuration = imageSource.kf.gifProperties(at: index).flatMap {
-            gifInfo -> Double? in
+        let defaultGIFFrameDuration = 0.100
+        let frameDuration = imageSource.kf.gifProperties(at: index).map {
+            gifInfo -> Double in
             
             let unclampedDelayTime = gifInfo[kCGImagePropertyGIFUnclampedDelayTime as String] as Double?
             let delayTime = gifInfo[kCGImagePropertyGIFDelayTime as String] as Double?
@@ -284,8 +305,8 @@ class Animator {
              
              See also: http://nullsleep.tumblr.com/post/16524517190/animated-gif-minimum-frame-delay-browser.
              */
-            return duration > 0.011 ? duration : 0.100
-        }
+            return duration > 0.011 ? duration : defaultGIFFrameDuration
+        } ?? defaultGIFFrameDuration
         
         let image = Image(cgImage: imageRef)
         let scaledImage: Image?
@@ -296,7 +317,7 @@ class Animator {
             scaledImage = image
         }
         
-        return AnimatedFrame(image: scaledImage, duration: frameDuration ?? 0.0)
+        return AnimatedFrame(image: scaledImage, duration: frameDuration)
     }
     
     /**
@@ -309,6 +330,7 @@ class Animator {
         }
         
         timeSinceLastFrameChange -= frameDuration
+        
         let lastFrameIndex = currentFrameIndex
         currentFrameIndex += 1
         currentFrameIndex = currentFrameIndex % animatedFrames.count

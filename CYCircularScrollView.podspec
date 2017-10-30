@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   # s.authors            = { "CY.Lee" => "lxypeter@sina.com" }
   # s.social_media_url   = "http://twitter.com/CY.Lee"
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   s.source       = { :git => "https://github.com/lxypeter/CYCircularScrollView.git", :tag => "1.0.5" }
 
